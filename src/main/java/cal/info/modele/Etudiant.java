@@ -1,4 +1,4 @@
-package org.example;
+package cal.info.modele;
 
 import java.util.List;
 
@@ -7,12 +7,19 @@ public class Etudiant {
     private int ageEtudiant;
     private double noteEtudiant;
     private List<Hackaton> preferences;
+//    private static List<Etudiant> listeEtudiants;
 
     public Etudiant (String nomEtudiant, int ageEtudiant, double noteEtudiant){
         setNomEtudiant(nomEtudiant);
         setAgeEtudiant(ageEtudiant);
         setNoteEtudiant(noteEtudiant);
+//        listeEtudiants.add(this);
     }
+//    public static void listerEtudiants(){
+//        for (Etudiant etudiant : listeEtudiants){
+//            System.out.println(etudiant.obtenirNom());
+//        }
+//    }
     public void setNoteEtudiant(double note){
         if (note < 0 || note >100){
             if (note < 0)
@@ -51,12 +58,12 @@ public class Etudiant {
             System.out.println(hackaton);
         }
     }
-    public static void main (String[] args){
-        Etudiant Alice = new Etudiant("Alice",19, 86);
-        Hackaton Ohana = new Hackaton("Ohana","Quebec");
-        Hackaton Mokana = new Hackaton("Mokana", "Ontario");
-        Alice.ajouterPreferenceHackaton(Ohana);
-        Alice.ajouterPreferenceHackaton(Mokana);
-        Alice.afficherPreferences();
-    }
+//    public static void main (String[] args){
+//        Etudiant Alice = new Etudiant("Alice",19, 86);
+//        Hackaton Ohana = new Hackaton("Ohana","Quebec");
+//        Hackaton Mokana = new Hackaton("Mokana", "Ontario");
+//        Alice.ajouterPreferenceHackaton(Ohana);
+//        Alice.ajouterPreferenceHackaton(Mokana);
+//        Alice.afficherPreferences();
+//    }
 }

@@ -1,3 +1,5 @@
+package cal.info.modele;
+
 import java.time.LocalDate;
 
 public class Hackaton {
