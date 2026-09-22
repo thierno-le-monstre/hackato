@@ -1,4 +1,6 @@
-package org.example;
+package cal.info.service;
+
+import cal.info.modele.Hackaton;
 
 import java.util.List;
 
