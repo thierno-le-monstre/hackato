@@ -75,7 +75,6 @@ public class ControlleurEtudiant implements HttpHandler {
 
     }
     public void modifierEtudiants(HttpExchange exchange) throws IOException {
-        String response
 
 
     }
