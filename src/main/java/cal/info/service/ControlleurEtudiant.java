@@ -75,10 +75,26 @@ public class ControlleurEtudiant implements HttpHandler {
 
     }
     public void modifierEtudiants(HttpExchange exchange) throws IOException {
+        String reponse = "Méthode indisponible pour le moment";
 
+        byte[] octetsReponse = reponse.getBytes(StandardCharsets.UTF_8);
+
+        exchange.sendResponseHeaders(200, octetsReponse.length);
+
+        OutputStream fluxSortie = exchange.getResponseBody();
+        fluxSortie.write(octetsReponse);
+        fluxSortie.close();
 
     }
-    public void supprimerEtudiants (HttpExchange exchange){
+    public void supprimerEtudiants (HttpExchange exchange) throws IOException{
+        String response = "Méthode indisponible pour le moment";
 
+        byte[] octetsReponse = response.getBytes(StandardCharsets.UTF_8);
+
+        exchange.sendResponseHeaders(200, octetsReponse.length);
+
+        OutputStream fluxSortie = exchange.getResponseBody();
+        fluxSortie.write(octetsReponse);
+        fluxSortie.close();
     }
 }
