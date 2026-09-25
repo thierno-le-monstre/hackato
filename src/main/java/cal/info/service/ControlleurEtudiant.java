@@ -47,7 +47,7 @@ public class ControlleurEtudiant implements HttpHandler {
 
         System.out.println("Données reçues du client : " + corpsRecu);
         // des choses
-        // ajout em bd
+        // ajout en bd
 
         // Écrire la réponse
         //ÉTAPE 1 : préparer le texte de la réponse
