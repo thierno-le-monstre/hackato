@@ -3,6 +3,7 @@ package cal.info.service;
 import cal.info.modele.Etudiant;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import tools.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,6 +38,11 @@ public class ControlleurEtudiant implements HttpHandler {
     public void ajout(HttpExchange exchange) throws IOException {
         // lire le corp
         InputStream fluxEntree = exchange.getRequestBody();
+
+        ObjectMapper traducteur = new ObjectMapper();
+        Etudiant karim = traducteur.readValue(fluxEntree.readAllBytes(), Etudiant.class);
+
+        System.out.println("Il est là : "+karim.obtenirNom());
 
         String corpsRecu = new String(
                 fluxEntree.readAllBytes(),
